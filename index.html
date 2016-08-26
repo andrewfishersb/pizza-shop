@@ -15,7 +15,7 @@
     </div>
     <div class="row">
       <div class="col-md-6">
-        <form class="form-group">
+        <form class="form-group" id ="pizza-order">
           <label>Enter Your Name</label>
           <input type="text" class="form-control" id="user-name" name="name">
           <!-- pizza size -->
@@ -118,9 +118,9 @@
             <div class="checkbox" >
               <label id="delivery"><input id="delivery-check" type="checkbox" name="delivery" value="delivery">Delivery</label>
             </div>
-            <button type="submit" class='btn btn-primary' name="button">Checkout</button>
+            <button type="submit" class='btn btn-primary' name="button"  >Checkout</button>
           </form>
-          <form class="address" action="index.html" method="post">
+          <form class="address" id="address-input">
             <div>
               <label>Enter Your Street Address</label>
               <input type="text" class="form-control" id="street" name="name">
@@ -130,7 +130,7 @@
               <input type="text" class="form-control" id="state" name="name">
               <label>Enter Your Zip Code</label>
               <input type="number" class="form-control" id="zip" name="name">
-              <button type="submit" class='btn btn-danger' name="button">Finish Checkout</button>
+              <button type="submit" class='btn btn-danger'  name="button">Finish Checkout</button>
             </div>
           </form>
 
@@ -140,16 +140,19 @@
             <h3>Order for: <span id="name"></span></h3>
             <h4><span id="size"></span> Pizza With: </h5>
             <ul id="toppings">
-              <li>Cheese</li>
+
             </ul>
             <h4>Charge: $<span id="charge"></span></h4>
             <h4>Delivery: <span id="deliver"></span></h4>
             <br>
-            <h3 class ="address">Address:</h3>
-            <h3 class ="address">Street: <span id="streetA"></span></h3>
-            <h4 class ="address">City: <span id= "cityA"></span></h4>
-            <h4 class ="address">State: <span id="stateA"></span></h4>
-            <h4 class ="address">Zip Code: <span id="zipC"></span></h4>
+            <div class="printed-address">
+              <h3 class ="address">Address:</h3>
+              <h4 class ="address">Street: <span id="street-a"></span></h4>
+              <h4 class ="address">City: <span id= "city-a"></span></h4>
+              <h4 class ="address">State: <span id="state-a"></span></h4>
+              <h4 class ="address">Zip Code: <span id="zip-a"></span></h4>
+            </div>
+
           </div>
 
 

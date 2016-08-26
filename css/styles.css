@@ -9,9 +9,14 @@ ul{
 #address input{
   margin-bottom: 1%;
 }
-
+#order{
+  display: none;
+}
 .address{
-  /*display: none;*/
+  display: none;
+}
+.printed-address{
+  display:
 }
 
 #delivery{

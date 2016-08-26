@@ -1,9 +1,9 @@
 //Backend
-function Person(name, street,city,state,zip){
-  this.name = name;
-  this.address= [];
-  this.delivery = false;
-}
+// function Person(name, street,city,state,zip){
+//   this.name = name;
+//   this.address= [];
+//   this.delivery = false;
+// }
 
 function Pizza(size,toppings){
   this.size = size;
@@ -44,16 +44,13 @@ Pizza.prototype.calculatePrice = function(){
 
 $(function(){
 
-  $("form").submit(function(event){
+  $("form#pizza-order").submit(function(event){
     event.preventDefault();
     $("#toppings").empty();
     var inputName =$("#user-name").val();
-    var inputStreet =$("#street").val();
-    var inputCity =$("#city").val();
-    var inputState =$("#state").val();
-    var inputZip = $("#zip").val();
 
-    var person = new Person(inputName,inputStreet,inputCity,inputState,inputZip);
+
+    // var person = new Person(inputName,inputStreet,inputCity,inputState,inputZip);
     var inputSize = $("#select-size").val();
     //play around to see if i can make it more me
     var inputToppings = $("input:checkbox[name=toppings]:checked").map(function(){
@@ -81,11 +78,25 @@ $(function(){
     if($("#delivery-check").is(':checked')){
         price += 2;
         $("#deliver").text("Yes");
-        $("#address").show();
+        $(".address").show();
     }else{
       $("#deliver").text("No");
+      $("#order").show();
     }
 
-  });
 
+  });
+  $("#address-input").submit(function(event){
+    event.preventDefault();
+    var inputStreet =$("#street").val();
+    var inputCity =$("#city").val();
+    var inputState =$("#state").val();
+    var inputZip = $("#zip").val();
+    $("#state-a").text(inputState);
+    $("#street-a").text(inputStreet);
+    $("#city-a").text(inputCity);
+    $("#zip-a").text(inputZip);
+    $(".printed-address").show();
+    $("#order").show();
+  })
 });
