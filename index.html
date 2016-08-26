@@ -4,7 +4,7 @@
   <meta charset="utf-8">
   <link rel="stylesheet" href="css/bootstrap.css" media="screen" title="no title" charset="utf-8">
   <link rel="stylesheet" href="css/styles.css" media="screen" title="no title" charset="utf-8">
-  <script src="js/jquery-3.1.0.min.js"></script>
+  <script src="js/jquery-3.1.0.js"></script>
   <script src="js/scripts.js"></script>
   <title>Pizza Shop</title>
 </head>
@@ -20,17 +20,17 @@
             <input type="text" class="form-control" name="name">
             <!-- pizza size -->
             <label>Choose the Size</label>
-            <select class="form-control" name="size">
+            <select class="form-control" id="size" name="size">
               <option value="small">Small</option>
               <option value="medium">Medium</option>
               <option value="large">Large</option>
               <option value="x-large">X-Large</option>
             </select>
             <!-- Meats -->
-            <div class="toppings">
+            <div id="toppings">
               <label class="page-header">Meats</label>
               <div class="checkbox">
-                <label><input type="checkbox" name="meat" value="Pepperoni">Pepperoni</label>
+                <label id="pepperoni"><input type="checkbox" name="meat" value="pepperoni">Pepperoni</label>
                 <label><input type="checkbox" name="meat" value="italian">Italian Sausage</label>
               </div>
               <div class="checkbox">
@@ -46,7 +46,7 @@
                 <label><input type="checkbox" name="meat" value="salami">Salami</label>
               </div>
               <div class="checkbox page-header">
-                <label><input type="checkbox" name="meat" value="chicken">Premium Chicken</label>
+                <label><input type="checkbox" name="meat" value="chicken" class"premium">Premium Chicken</label>
                 <label><input type="checkbox" name="meat" value="anchovies">Anchovies</label>
               </div>
               <!-- Veggies -->
@@ -80,6 +80,8 @@
           <div id="order">
 
           </div>
+
+
         </div>
       </div>
     </div>
