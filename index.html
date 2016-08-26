@@ -17,14 +17,14 @@
         <div class="col-md-6">
           <form class="form-group">
             <label>Enter Your Name</label>
-            <input type="text" class="form-control" name="name">
+            <input type="text" class="form-control" id="user-name" name="name">
             <!-- pizza size -->
             <label>Choose the Size</label>
-            <select class="form-control" id="size" name="size">
-              <option value="small">Small</option>
-              <option value="medium">Medium</option>
-              <option value="large">Large</option>
-              <option value="x-large">X-Large</option>
+            <select class="form-control" id="select-size" name="size">
+              <option value="Small">Small</option>
+              <option value="Medium">Medium</option>
+              <option value="Large">Large</option>
+              <option value="X-Large">X-Large</option>
             </select>
             <!-- Meats -->
 
@@ -34,20 +34,20 @@
               <label id="italian"><input type="checkbox" name="toppings" value="italian">Italian Sausage</label>
             </div>
             <div class="checkbox">
-              <label class = "prem" id="sliced"><input type="checkbox" name="toppings" value="sliced">Sliced Italian Sausage</label>
+              <label id="sliced"><input type="checkbox" name="toppings" value="sliced">Sliced Italian Sausage</label>
               <label id="beef"><input type="checkbox" name="toppings" value="beef">Beef</label>
             </div>
             <div class="checkbox">
-              <label class="prem"id="steak"><input type="checkbox" name="toppings" value="steak">Philly Steak</label>
+              <label id="steak"><input type="checkbox" name="toppings" value="steak">Philly Steak</label>
               <label id="ham"><input type="checkbox" name="toppings" value="ham">Ham</label>
             </div>
             <div class="checkbox">
               <label id="bacon"><input type="checkbox" name="toppings" value="bacon">Bacon</label>
-              <label class="prem" id="salami"><input type="checkbox" name="toppings" value="salami">Salami</label>
+              <label id="salami"><input type="checkbox" name="toppings" value="salami">Salami</label>
             </div>
             <div class="checkbox page-header">
-              <label class="prem" id="chicken"><input type="checkbox" name="toppings" value="chicken" class"premium">Premium Chicken</label>
-              <label class="prem" id="anchovies"><input type="checkbox" name="toppings" value="anchovies">Anchovies</label>
+              <label id="chicken"><input type="checkbox" name="toppings" value="chicken" class"premium">Premium Chicken</label>
+              <label id="anchovies"><input type="checkbox" name="toppings" value="anchovies">Anchovies</label>
             </div>
             <!-- Veggies -->
             <label class="page-header">Vegetables</label>
@@ -67,7 +67,7 @@
               <label id="onions"><input type="checkbox" name="toppings" value="onions">Onions</label>
             </div>
             <div class="checkbox" >
-              <label id="delivery"><input type="checkbox" name="delivery" value="delivery">Delivery</label>
+              <label id="delivery"><input id="delivery-check" type="checkbox" name="delivery" value="delivery">Delivery</label>
             </div>
             <button type="submit" class='btn btn-primary' name="button">Checkout</button>
           </form>
@@ -76,7 +76,13 @@
         </div>
         <div class = "col-md-6">
           <div id="order">
+            <h3>Order for: <span id="name"></span></h3>
+            <h4><span id="size"></span> Pizza With: </h5>
+            <ul id="toppings">
 
+            </ul>
+            <h4>Charge: $<span id="charge"></span></h4>
+            <h4>Delivery: <span id="deliver"></span></h4>
           </div>
 
 
