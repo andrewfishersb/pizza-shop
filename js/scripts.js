@@ -12,6 +12,10 @@ function Pizza(size,toppings){ // contructors may change
   //possibly toppings for premium and regular
 }
 
+  function Topping(name){
+    this.name = name;
+    this.isPremium = false;
+  }
 // Pizza.prototype.createOrder = function(pizza){
 //   this.toppings.push(this.size);
 // }
@@ -33,7 +37,7 @@ Pizza.prototype.calculatePrice = function(){
     this.price+=13.99 + numberOfToppings*2.00;
   }
   this.price = Math.round(this.price*100)/100;
-  if(this.isPremium){
+  if(Topping.isPremium){
     this.price +=.6
   }
   return this.price;
@@ -44,17 +48,6 @@ Pizza.prototype.calculatePrice = function(){
 //Front-End
 
 $(function(){
-  //function that takes the values and conver them to the label
-  // var valueToLabel = function(array){
-  //   array.forEach(function(item){
-  //     console.log("got here: " + this.value);
-  //
-  //     item = $("#"+this.value).text();
-  //   })
-  // }
-
-
-
   $("form").submit(function(event){
     event.preventDefault();
     var inputSize = $("#size").val();
@@ -62,7 +55,20 @@ $(function(){
     var inputToppings = $("input:checkbox[name=toppings]:checked").map(function(){
       //takes the value from <input> being stripped and uses the name with a # to convert to the label which I named using the # + value
       var convertToLabel =$("#" + this.value).text();
-      return convertToLabel;
+      console.log("")
+      //WORK HERE WHEN I GET BACK CHECK IF PREMIUM AND THEN TURN TOPPING INTO PREMIUM
+
+
+
+
+
+
+
+
+
+
+
+      return new Topping(convertToLabel);
     }).get();
 
 
