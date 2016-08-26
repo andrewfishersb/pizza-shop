@@ -1,13 +1,18 @@
 label{
-  margin-right: 10%;
+  margin-top: 2.5%;
 }
 
+ul{
+  list-style: none;
+}
 
+#address input{
+  margin-bottom: 1%;
+}
 
-
-
-
-
+.address{
+  /*display: none;*/
+}
 
 #delivery{
   margin-top: 2.5%;

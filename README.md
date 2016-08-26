@@ -38,17 +38,9 @@ _7. It can combine the price of multiple toppings and pizza size_
 * _Input Example: large, Pepperoni, Olives, Onion, Pineapple_
 * _Output Example: $16.50_
 
-_8. It can ask the user for multiple pizzas_
-* _Input Example: [Large, Pepperoni, Olives], [Small, Onion, Pineapple]_
-* _Output Example: [[Large, Pepperoni, Olives], [Small, Onion, Pineapple]]_
-
-_9. It can calculate the price of multiple pizzas_
-* _Input Example: [Large, Pepperoni, Olives], [Small, Onion, Pineapple]_
-* _Output Example: $15.00 and $10.50_
-
-_10. It the user can check a delivery option and it will then ask for an address_
+_8. It the user can check a delivery option and it will then ask for an address_
 * _Input Example: 555 Main Street_
-* _Output Example: Thanks for your order_
+* _Output Example: 555 Main Street_
 
 ## Setup/Installation Requirements
 

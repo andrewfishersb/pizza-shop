@@ -1,28 +1,21 @@
 //Backend
-function Person(){ // may not need unless multiple orders
+function Person(name, street,city,state,zip){
   this.name = name;
-  this.pizza = new Pizza(); // this may change
+  this.address= [];
   this.delivery = false;
 }
 
-function Pizza(size,toppings){ // contructors may change
+function Pizza(size,toppings){
   this.size = size;
   this.toppings = toppings;
   this.price = 0;
-  //possibly toppings for premium and regular
 }
 
   function Topping(type){
     this.type = type;
     this.isPremium = false;
   }
-// Pizza.prototype.createOrder = function(pizza){
-//   this.toppings.push(this.size);
-// }
 
-
-//at first all toppings cost the same
-//if delivery add a charge
 Pizza.prototype.calculatePrice = function(){
   var numberOfToppings = this.toppings.length;
   var premToppings =0;
@@ -53,7 +46,14 @@ $(function(){
 
   $("form").submit(function(event){
     event.preventDefault();
-    var inputName = $("user-name").val();
+    $("#toppings").empty();
+    var inputName =$("#user-name").val();
+    var inputStreet =$("#street").val();
+    var inputCity =$("#city").val();
+    var inputState =$("#state").val();
+    var inputZip = $("#zip").val();
+
+    var person = new Person(inputName,inputStreet,inputCity,inputState,inputZip);
     var inputSize = $("#select-size").val();
     //play around to see if i can make it more me
     var inputToppings = $("input:checkbox[name=toppings]:checked").map(function(){
@@ -76,12 +76,12 @@ $(function(){
     });
 
 
-
     $("#charge").text(price);
     //Adds a delivery fee
     if($("#delivery-check").is(':checked')){
         price += 2;
         $("#deliver").text("Yes");
+        $("#address").show();
     }else{
       $("#deliver").text("No");
     }

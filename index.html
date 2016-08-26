@@ -8,81 +8,148 @@
   <script src="js/scripts.js"></script>
   <title>Pizza Shop</title>
 </head>
-  <body>
-    <div class="container">
-      <div class="page-header">
-        <h1>Welcome to Andrew's Pizza Shop</h1>
-      </div>
-      <div class="row">
-        <div class="col-md-6">
-          <form class="form-group">
-            <label>Enter Your Name</label>
-            <input type="text" class="form-control" id="user-name" name="name">
-            <!-- pizza size -->
-            <label>Choose the Size</label>
-            <select class="form-control" id="select-size" name="size">
-              <option value="Small">Small</option>
-              <option value="Medium">Medium</option>
-              <option value="Large">Large</option>
-              <option value="X-Large">X-Large</option>
-            </select>
-            <!-- Meats -->
+<body>
+  <div class="container">
+    <div class="page-header">
+      <h1>Welcome to Andrew's Pizza Shop</h1>
+    </div>
+    <div class="row">
+      <div class="col-md-6">
+        <form class="form-group">
+          <label>Enter Your Name</label>
+          <input type="text" class="form-control" id="user-name" name="name">
+          <!-- pizza size -->
+          <label>Choose the Size</label>
+          <select class="form-control" id="select-size" name="size">
+            <option value="Small">Small</option>
+            <option value="Medium">Medium</option>
+            <option value="Large">Large</option>
+            <option value="X-Large">X-Large</option>
+          </select>
+          <!-- Meats -->
 
-            <label class="page-header">Meats</label>
+          <label class="page-header">Meats</label>
+          <div class="row">
             <div class="checkbox">
-              <label id="pepperoni"><input type="checkbox" name="toppings" value="pepperoni">Pepperoni</label>
-              <label id="italian"><input type="checkbox" name="toppings" value="italian">Italian Sausage</label>
+              <div class="col-md-4">
+                <label id="pepperoni"><input type="checkbox" name="toppings" value="pepperoni">Pepperoni</label>
+              </div>
+              <div class="col-md-4">
+                <label id="italian"><input type="checkbox" name="toppings" value="italian">Italian Sausage</label>
+              </div>
             </div>
+          </div>
+          <div class="row">
             <div class="checkbox">
-              <label id="sliced"><input type="checkbox" name="toppings" value="sliced">Sliced Italian Sausage</label>
-              <label id="beef"><input type="checkbox" name="toppings" value="beef">Beef</label>
+              <div class="col-md-4">
+                <label id="steak"><input type="checkbox" name="toppings" value="steak">Philly Steak</label>
+              </div>
+              <div class="col-md-4">
+                <label id="ham"><input type="checkbox" name="toppings" value="ham">Ham</label>
+              </div>
             </div>
+          </div>
+          <div class="row">
             <div class="checkbox">
-              <label id="steak"><input type="checkbox" name="toppings" value="steak">Philly Steak</label>
-              <label id="ham"><input type="checkbox" name="toppings" value="ham">Ham</label>
+              <div class="col-md-4">
+                <label id="bacon"><input type="checkbox" name="toppings" value="bacon">Bacon</label>
+              </div>
+              <div class="col-md-4">
+                <label id="salami"><input type="checkbox" name="toppings" value="salami">Salami</label>
+              </div>
             </div>
+          </div>
+          <div class="row">
             <div class="checkbox">
-              <label id="bacon"><input type="checkbox" name="toppings" value="bacon">Bacon</label>
-              <label id="salami"><input type="checkbox" name="toppings" value="salami">Salami</label>
+              <div class="col-md-4">
+                <label id="chicken"><input type="checkbox" name="toppings" value="chicken" class"premium">Premium Chicken</label>
+              </div>
+              <div class="col-md-4">
+                <label id="anchovies"><input type="checkbox" name="toppings" value="anchovies">Anchovies</label>
+              </div>
             </div>
-            <div class="checkbox page-header">
-              <label id="chicken"><input type="checkbox" name="toppings" value="chicken" class"premium">Premium Chicken</label>
-              <label id="anchovies"><input type="checkbox" name="toppings" value="anchovies">Anchovies</label>
+            <div class="page-header">
             </div>
-            <!-- Veggies -->
-            <label class="page-header">Vegetables</label>
+          </div>
+
+          <!-- Veggies -->
+          <label class="page-header">Vegetables</label>
+          <div class="row">
             <div class="checkbox">
-              <label id="banana"><input type="checkbox" name="toppings" value="banana">Banana Peppers</label>
-              <label id="garlic"><input type="checkbox" name="toppings" value="garlic">Garlic</label>
-              <label id="jalapeno"><input type="checkbox" name="toppings" value="jalapeno">Jalapeno Peppers</label>
+              <div class="col-md-4">
+                <label id="banana"><input type="checkbox" name="toppings" value="banana">Banana Peppers</label>
+              </div>
+              <div class="col-md-4">
+                <label id="garlic"><input type="checkbox" name="toppings" value="garlic">Garlic</label>
+              </div>
+              <div class="col-md-4">
+                <label id="jalapeno"><input type="checkbox" name="toppings" value="jalapeno">Jalapeno Peppers</label>
+              </div>
             </div>
+          </div>
+          <div class="row">
             <div class="checkbox">
-              <label id="pineapple"><input type="checkbox" name="toppings" value="pineapple">Pineapple</label>
-              <label id="tomatoes"><input type="checkbox" name="toppings" value="tomatoes">Diced Tomatoes</label>
-              <label id="olives"><input type="checkbox" name="toppings" value="olives">Black Olives</label>
+              <div class="col-md-4">
+                <label id="pineapple"><input type="checkbox" name="toppings" value="pineapple">Pineapple</label>
+              </div>
+              <div class="col-md-4">
+                <label id="tomatoes"><input type="checkbox" name="toppings" value="tomatoes">Diced Tomatoes</label>
+              </div>
+              <div class="col-md-4">
+                <label id="olives"><input type="checkbox" name="toppings" value="olives">Black Olives</label>
+              </div>
             </div>
-            <div class="checkbox page-header">
-              <label id="peppers"><input type="checkbox" name="toppings" value="peppers">Red Peppers</label>
-              <label id="mushroom"><input type="checkbox" name="toppings" value="mushroom">Mushroom</label>
-              <label id="onions"><input type="checkbox" name="toppings" value="onions">Onions</label>
+          </div>
+          <div class="row">
+            <div class="checkbox">
+              <div class="col-md-4">
+                <label id="peppers"><input type="checkbox" name="toppings" value="peppers">Red Peppers</label>
+              </div>
+              <div class="col-md-4">
+                <label id="mushroom"><input type="checkbox" name="toppings" value="mushroom">Mushroom</label>
+              </div>
+              <div class="col-md-4">
+                <label id="onions"><input type="checkbox" name="toppings" value="onions">Onions</label>
+              </div>
             </div>
+            <div class="page-header">
+            </div>
+          </div>
             <div class="checkbox" >
               <label id="delivery"><input id="delivery-check" type="checkbox" name="delivery" value="delivery">Delivery</label>
             </div>
             <button type="submit" class='btn btn-primary' name="button">Checkout</button>
           </form>
-          <div id="address">
-          </div>
+          <form class="address" action="index.html" method="post">
+            <div>
+              <label>Enter Your Street Address</label>
+              <input type="text" class="form-control" id="street" name="name">
+              <label>Enter Your City</label>
+              <input type="text" class="form-control" id="city" name="name">
+              <label>Enter Your State</label>
+              <input type="text" class="form-control" id="state" name="name">
+              <label>Enter Your Zip Code</label>
+              <input type="number" class="form-control" id="zip" name="name">
+              <button type="submit" class='btn btn-danger' name="button">Finish Checkout</button>
+            </div>
+          </form>
+
         </div>
         <div class = "col-md-6">
           <div id="order">
             <h3>Order for: <span id="name"></span></h3>
             <h4><span id="size"></span> Pizza With: </h5>
             <ul id="toppings">
-
+              <li>Cheese</li>
             </ul>
             <h4>Charge: $<span id="charge"></span></h4>
             <h4>Delivery: <span id="deliver"></span></h4>
+            <br>
+            <h3 class ="address">Address:</h3>
+            <h3 class ="address">Street: <span id="streetA"></span></h3>
+            <h4 class ="address">City: <span id= "cityA"></span></h4>
+            <h4 class ="address">State: <span id="stateA"></span></h4>
+            <h4 class ="address">Zip Code: <span id="zipC"></span></h4>
           </div>
 
 
