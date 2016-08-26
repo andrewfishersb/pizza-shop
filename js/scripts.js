@@ -1,28 +1,22 @@
 //Backend
-// function Person(name, street,city,state,zip){
-//   this.name = name;
-//   this.address= [];
-//   this.delivery = false;
-// }
-
 function Pizza(size,toppings){
   this.size = size;
   this.toppings = toppings;
   this.price = 0;
 }
 
-  function Topping(type){
-    this.type = type;
-    this.isPremium = false;
-  }
+function Topping(type){
+  this.type = type;
+  this.isPremium = false;
+}
 
 Pizza.prototype.calculatePrice = function(){
   var numberOfToppings = this.toppings.length;
   var premToppings =0;
   for(var i =0;i<numberOfToppings;i++){
-      if(this.toppings[i].isPremium){
-        premToppings++;
-      }
+    if(this.toppings[i].isPremium){
+      premToppings++;
+    }
   }
   if(this.size==='Small'){
     this.price += 7.99 + numberOfToppings*1.25;
@@ -69,16 +63,16 @@ $(function(){
     $("#name").text(inputName);
     $("#size").text(inputSize);
     myPizza.toppings.forEach(function(topping){
-        $("#toppings").append("<li>"+topping.type+"</li>");
+      $("#toppings").append("<li>"+topping.type+"</li>");
     });
 
 
     $("#charge").text(price);
     //Adds a delivery fee
     if($("#delivery-check").is(':checked')){
-        price += 2;
-        $("#deliver").text("Yes");
-        $(".address").show();
+      price += 2;
+      $("#deliver").text("Yes");
+      $(".address").show();
     }else{
       $("#deliver").text("No");
       $("#order").show();

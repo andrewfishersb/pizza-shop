@@ -1,20 +1,47 @@
 label{
   margin-top: 2.5%;
+  font-size: 20px;
+  color:white;
+  text-shadow: 1px 1px 1px black;
 }
 
+body{
+  font-family: 'Indie Flower','cursive';
+  background-image: url(../img/pizza2.jpg);
+
+}
 ul{
   list-style: none;
+}
+
+h3{
+    font-size: 50px;
+}
+h4{
+  font-size: 20px;
+}
+li{
+  font-size: 20px;
+}
+.jumbotron{
+    background-image: url(../img/pizza.png);
+  color: blue;
+  text-shadow: 2px 2px 2px black;
+  box-shadow: 20px 20px 20px black;
 }
 
 #address input{
   margin-bottom: 1%;
 }
+
 #order{
   display: none;
 }
+
 .address{
   display: none;
 }
+
 .printed-address{
   display:
 }
