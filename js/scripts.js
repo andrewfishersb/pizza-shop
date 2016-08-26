@@ -9,7 +9,6 @@ function Pizza(size,toppings){ // contructors may change
   this.size = size;
   this.toppings = toppings;
   this.price = 0;
-  this.isPremium = false;
   //possibly toppings for premium and regular
 }
 
@@ -60,15 +59,12 @@ $(function(){
     event.preventDefault();
     var inputSize = $("#size").val();
     //play around to see if i can make it more me
-    var inputToppings = $("#toppings input:checkbox:checked").map(function(){
-
-      console.log("got here: " + this.value)
-        return "got here: " + this.value;
+    var inputToppings = $("input:checkbox[name=toppings]:checked").map(function(){
+      //takes the value from <input> being stripped and uses the name with a # to convert to the label which I named using the # + value
+      var convertToLabel =$("#" + this.value).text();
+      return convertToLabel;
     }).get();
 
-    // var inputToppings = $("#toppings input:checkbox:checked").map(function(){
-    //     return this.value;
-    // }).get();
 
 
     // valueToLabel(inputToppings);
