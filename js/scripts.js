@@ -44,9 +44,7 @@ $(function(){
     var inputName =$("#user-name").val();
 
 
-    // var person = new Person(inputName,inputStreet,inputCity,inputState,inputZip);
     var inputSize = $("#select-size").val();
-    //play around to see if i can make it more me
     var inputToppings = $("input:checkbox[name=toppings]:checked").map(function(){
 
       //takes the value from <input> being stripped and uses the name with a # to convert to the label which I named using the # + value
